@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLASSIFIED DOCUMENT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 잠금 화면 -->
+  <div id="classifiedPage" class="document">
+
+    <div class="top-label">
+      <span>CLASSIFIED DOCUMENT</span>
+      <span>TOP SECRET</span>
+    </div>
+
+    <hr>
+
+    <div class="main-title">
+      <div class="title-text">열람불가</div>
+      <div class="subtitle">ACCESS DENIED</div>
+    </div>
+
+    <hr>
+
+    <div class="metadata">
+      DOCUMENT NO. ████-████-██<br>
+      SECURITY LEVEL : RESTRICTED<br>
+      AUTHORIZATION : DENIED
+    </div>
+
+    <div class="warning-box">
+
+      <div class="warning-title">
+        WARNING : UNAUTHORIZED ACCESS
+      </div>
+
+      <div class="redaction redaction-1"></div>
+      <div class="redaction redaction-2"></div>
+      <div class="redaction redaction-3"></div>
+      <div class="redaction redaction-4"></div>
+
+      <div class="denied-message">
+        <div class="denied-title">
+          열람 권한이 없습니다.
+        </div>
+
+        <div class="denied-description">
+          본 문서는 현재 접근권한이 승인된 인원에 한해<br>
+          열람할 수 있습니다.<br>
+          이후 다시 시도해주시길 바랍니다.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 패스워드 입력 -->
+    <div class="password-box">
+
+      <div class="password-title">
+        ENTER AUTHORIZATION CODE
+      </div>
+
+      <form id="passwordForm">
+
+        <input
+          id="passwordInput"
+          type="password"
+          placeholder="ENTER PASSWORD"
+          autocomplete="off"
+          aria-label="Password"
+        >
+
+        <button type="submit">
+          ACCESS
+        </button>
+
+      </form>
+
+      <div id="errorMessage">
+        ERROR : INVALID AUTHORIZATION CODE
+      </div>
+
+    </div>
+
+    <div class="bottom-label">
+      <span>UNAUTHORIZED ACCESS PROHIBITED</span>
+      <span>SECURITY ARCHIVE</span>
+    </div>
+
+  </div>
+
+
+  <!-- 잠금 해제 화면 -->
+  <div id="secretPage" class="document unlocked" hidden>
+
+    <div class="top-label granted">
+      <span>CLASSIFIED DOCUMENT</span>
+      <span>ACCESS GRANTED</span>
+    </div>
+
+    <hr>
+
+    <div class="main-title">
+      <div class="title-text">열람 승인</div>
+      <div class="subtitle granted-text">
+        AUTHORIZATION CONFIRMED
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="metadata">
+      DOCUMENT NO. ████-████-██<br>
+      SECURITY LEVEL : TOP SECRET<br>
+      AUTHORIZATION : APPROVED
+    </div>
+
+    <div class="warning-box">
+
+      <div class="warning-title granted-text">
+        ACCESS CONFIRMED
+      </div>
+
+      <div class="content-heading">
+        DOCUMENT CONTENT
+      </div>
+
+      <div class="secret-content">
+
+        <!-- 이곳에 공개할 내용을 작성하세요 -->
+
+        여기에 비밀 문서 내용을 작성하세요.
+
+        <br><br>
+
+        이 영역은 올바른 패스워드를 입력한 경우에만
+        화면에 표시됩니다.
+
+      </div>
+
+    </div>
+
+    <div class="bottom-label">
+      <span>AUTHORIZED ACCESS ONLY</span>
+      <span>SECURITY ARCHIVE</span>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
