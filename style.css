@@ -1,0 +1,254 @@
+
+/* 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #080909;
+  color: #d5d5d5;
+  margin: 0;
+  padding: 30px 15px;
+  font-family: monospace;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* 문서 전체 */
+.document {
+  background: #111315;
+  border: 1px solid #454545;
+  padding: 24px 18px;
+  max-width: 650px;
+  margin: auto;
+}
+
+/* 상단 표시 */
+.top-label {
+  display: flex;
+  justify-content: space-between;
+  color: #c94a4a;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  gap: 10px;
+}
+
+.granted {
+  color: #6baf82;
+}
+
+/* 구분선 */
+hr {
+  border: 0;
+  border-top: 1px solid #555;
+  margin: 15px 0;
+}
+
+/* 제목 */
+.main-title {
+  text-align: center;
+  padding: 25px 0;
+}
+
+.title-text {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 12px;
+  color: #eee;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 5px;
+  margin-top: 12px;
+}
+
+.granted-text {
+  color: #6baf82 !important;
+}
+
+/* 문서 정보 */
+.metadata {
+  font-size: 11px;
+  color: #888;
+  line-height: 2;
+}
+
+/* 경고 영역 */
+.warning-box {
+  background: #1b1d1f;
+  padding: 20px;
+  margin: 22px 0;
+  border: 1px solid #383838;
+}
+
+.warning-title {
+  color: #bd4545;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 검열 막대 */
+.redaction {
+  background: #080808;
+  height: 12px;
+  margin: 12px auto;
+}
+
+.redaction-1 {
+  width: 95%;
+}
+
+.redaction-2 {
+  width: 75%;
+}
+
+.redaction-3 {
+  width: 88%;
+}
+
+.redaction-4 {
+  width: 60%;
+}
+
+/* 열람 거부 메시지 */
+.denied-message {
+  text-align: center;
+  padding: 25px 0 10px;
+}
+
+.denied-title {
+  font-size: 25px;
+  color: #c74747;
+  font-weight: bold;
+}
+
+.denied-description {
+  font-size: 11px;
+  color: #888;
+  margin-top: 12px;
+  line-height: 1.8;
+}
+
+/* 패스워드 영역 */
+.password-box {
+  border: 1px solid #383838;
+  background: #1b1d1f;
+  padding: 18px;
+  margin-top: 25px;
+}
+
+.password-title {
+  color: #888;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* 입력폼 */
+#passwordForm {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#passwordInput {
+  flex: 1;
+  min-width: 0;
+  background: #080808;
+  border: 1px solid #555;
+  color: #eee;
+  padding: 12px;
+  font-family: monospace;
+  font-size: 12px;
+  outline: none;
+}
+
+#passwordInput:focus {
+  border-color: #c74747;
+}
+
+/* 버튼 */
+#passwordForm button {
+  background: #292929;
+  color: #c74747;
+  border: 1px solid #555;
+  padding: 12px 18px;
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#passwordForm button:hover {
+  background: #3a2525;
+  border-color: #c74747;
+}
+
+/* 오류 메시지 */
+#errorMessage {
+  color: #c74747;
+  font-size: 11px;
+  text-align: center;
+  margin-top: 12px;
+  display: none;
+}
+
+/* 잠금 해제된 문서 */
+.content-heading {
+  color: #888;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.secret-content {
+  color: #eee;
+  font-size: 14px;
+  line-height: 2;
+  word-break: break-word;
+}
+
+/* 하단 표시 */
+.bottom-label {
+  border-top: 1px solid #555;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 9px;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* 모바일 대응 */
+@media (max-width: 480px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  .document {
+    padding: 20px 14px;
+  }
+
+  .title-text {
+    font-size: 26px;
+    letter-spacing: 8px;
+  }
+
+  .denied-title {
+    font-size: 21px;
+  }
+
+  .bottom-label {
+    font-size: 8px;
+  }
+}
